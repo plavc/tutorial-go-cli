@@ -1,12 +1,17 @@
 
+default: clean build test
+
 deps:
 	go mod tidy
-	go mod vendor
 
 build:
-	go build -o out/tutorial-go-cli cmd/cli/main.go
+	go build -o out/tutorgo main.go
+
+test:
+	go test ...
 
 run:
-	out/tutorial-go-cli
+	out/tutorgo
 
-docker-build:
+clean:
+	rm -r out || true

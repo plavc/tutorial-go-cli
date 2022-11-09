@@ -19,3 +19,6 @@
 *.iws
 *.iml
 *.ipr
+
+# Binary output
+out
